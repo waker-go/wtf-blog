@@ -1,0 +1,145 @@
+/* ========================================
+   性能优化CSS
+   ======================================== */
+
+/* 使用GPU加速的元素 */
+.blog-card,
+.blog-item,
+.category-item,
+.value-item,
+.skill-category,
+.timeline-item,
+.back-to-top,
+.theme-switcher-btn {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* 优化动画性能 */
+.blog-card:hover,
+.blog-item:hover,
+.category-item:hover {
+    will-change: transform, box-shadow;
+}
+
+/* 图片容器优化 */
+.blog-image,
+.about-image,
+.related-image,
+.post-image {
+    contain: layout style paint;
+}
+
+/* 懒加载图片样式 */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* 图片加载占位符 */
+img[data-src]:not(.loaded) {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* 减少重绘的元素 */
+.header,
+.footer,
+.sidebar {
+    contain: layout style;
+}
+
+/* 优化滚动性能 */
+.blog-main,
+.blog-sidebar,
+.archive-timeline {
+    contain: layout;
+}
+
+/* 字体渲染优化 */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* 减少动画卡顿 */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 优化过渡效果 */
+.blog-card,
+.blog-item,
+.btn,
+a {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 内容可见性优化 - 对屏幕外内容延迟渲染 */
+.blog-item:not(:nth-child(-n+3)),
+.archive-month:not(:first-child) {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
+/* 减少布局抖动 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 优化阴影性能 */
+.blog-card,
+.blog-item,
+.category-item {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.blog-card:hover,
+.blog-item:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    /* 减少移动端动画 */
+    * {
+        animation-duration: 0.5s !important;
+        transition-duration: 0.3s !important;
+    }
+    
+    /* 禁用某些特效 */
+    .cherry-blossom-container,
+    .particles-container {
+        display: none !important;
+    }
+}
+
+/* 打印优化 */
+@media print {
+    .header,
+    .footer,
+    .back-to-top,
+    .theme-switcher-btn,
+    .cherry-blossom-container,
+    .particles-container {
+        display: none !important;
+    }
+}

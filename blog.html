@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客文章 | 我想见貂蝉的个人博客</title>
+    
+    <!-- DNS预解析和预连接 -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    
+    <!-- 关键CSS -->
+    <link rel="stylesheet" href="./css/style-premium.css">
+    <link rel="stylesheet" href="./css/blog-cards.css">
+    <link rel="stylesheet" href="./css/theme-switcher.css">
+    <link rel="stylesheet" href="./css/blog-list-fix.css">
+    <link rel="stylesheet" href="./css/performance.css">
+    
+    <!-- 非关键CSS延迟加载 -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"></noscript>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">我想见<span>貂蝉</span></a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="blog.html" class="active">博客</a></li>
+                    <li><a href="archive.html">归档</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-title">
+        <div class="container">
+            <h1 data-aos="fade-up">博客文章</h1>
+            <div class="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html">首页</a> / <span>博客</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 博客列表 -->
+    <section class="blog-list">
+        <div class="container">
+            <div class="blog-container">
+                <div class="blog-main">
+                    <!-- 博客文章 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-1.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">30</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">编程技术</div>
+                            <h2><a href="blog-single.html">我的前端开发之旅</a></h2>
+                            <p>分享我学习前端开发的经历和心得，从初学者到能够独立开发网站的过程。本文将介绍我使用的学习资源、遇到的挑战以及克服困难的方法，希望能给其他学习编程的朋友一些启发。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                                <span><i class="far fa-comment"></i> 24 评论</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-1.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">28</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">编程技术</div>
+                            <h2><a href="blog-single.html">Vue 3组合式API实战指南</a></h2>
+                            <p>深入探讨Vue 3的组合式API，从基础概念到实际应用。通过实例讲解如何使用setup函数、响应式API和生命周期钩子，帮助你更好地理解和使用Vue 3的新特性。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                                <span><i class="far fa-comment"></i> 18 评论</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-2.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">25</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">历史研究</div>
+                            <h2><a href="blog-single.html">貂蝉：历史与传说之间</a></h2>
+                            <p>深入探讨貂蝉这一历史人物的真实面貌与文学形象。通过分析历史文献和文学作品，探索貂蝉在历史长河中的地位和影响，以及她在民间传说和文化中的演变过程，揭示这位三国美人背后的历史真相。
+                            </p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                                <span><i class="far fa-comment"></i> 12 评论</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-4.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">22</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">学习笔记</div>
+                            <h2><a href="blog-single.html">JavaScript异步编程深度解析</a></h2>
+                            <p>详细讲解JavaScript中的异步编程概念，包括回调函数、Promise、async/await等。通过实例演示如何处理异步操作，帮助你掌握现代JavaScript异步编程的最佳实践。
+                            </p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                                <span><i class="far fa-comment"></i> 8 评论</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第5篇：CSS Grid布局 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-3.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">20</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">编程技术</div>
+                            <h2><a href="blog-single.html">CSS Grid布局完全指南</a></h2>
+                            <p>CSS Grid是一个强大的二维布局系统，可以轻松创建复杂的网页布局。本文详细介绍Grid的核心概念、属性使用和实战技巧，帮助你掌握现代CSS布局的精髓。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第6篇：响应式设计 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-4.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">18</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">编程技术</div>
+                            <h2><a href="blog-single.html">响应式设计最佳实践</a></h2>
+                            <p>探讨响应式网页设计的核心原则和实现方法，包括媒体查询、弹性布局、移动优先策略等。通过实例展示如何创建适配各种设备的优秀用户体验。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第7篇：三国历史 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-2.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">15</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">历史研究</div>
+                            <h2><a href="blog-single.html">三国历史中的女性角色</a></h2>
+                            <p>深入探讨三国时期的女性人物，包括貂蝉、大乔、小乔等。分析她们在历史和文学作品中的形象差异，揭示那个时代女性的真实生活状态。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第8篇：JavaScript异步 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-1.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">12</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">学习笔记</div>
+                            <h2><a href="blog-single.html">JavaScript异步编程详解</a></h2>
+                            <p>系统学习JavaScript异步编程的各种方式，从回调函数到Promise，再到async/await。通过实例理解事件循环、微任务和宏任务的执行机制。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第9篇：阅读清单 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-3.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">10</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">生活随笔</div>
+                            <h2><a href="blog-single.html">我的阅读清单与思考</a></h2>
+                            <p>分享最近阅读的技术书籍和历史著作，记录阅读过程中的感悟和收获。从《JavaScript高级程序设计》到《三国志》，探索知识的多元魅力。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第10篇：Vue 3实战 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-4.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">08</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">编程技术</div>
+                            <h2><a href="blog-single.html">Vue 3组合式API实战</a></h2>
+                            <p>通过实际项目案例，深入讲解Vue 3组合式API的使用技巧。包括setup函数、响应式系统、生命周期钩子等核心概念的实战应用。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第11篇：东汉末年 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-2.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">05</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">历史研究</div>
+                            <h2><a href="blog-single.html">东汉末年的政治格局</a></h2>
+                            <p>分析东汉末年的政治形势，从黄巾起义到群雄割据。探讨这一历史时期的社会变革、权力斗争和文化发展，理解三国时代的历史背景。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第12篇：Git工作流 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-1.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">02</span>
+                                <span class="month">十月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">学习笔记</div>
+                            <h2><a href="blog-single.html">Git工作流程与团队协作</a></h2>
+                            <p>学习Git的核心概念和常用命令，掌握分支管理、合并冲突解决等技能。分享团队协作中的Git最佳实践和工作流程规范。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第13篇：年度总结 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-3.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">28</span>
+                                <span class="month">九月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">生活随笔</div>
+                            <h2><a href="blog-single.html">2024年度总结与展望</a></h2>
+                            <p>回顾2024年的学习成长和生活感悟，总结技术进步和个人发展。展望2025年的目标和计划，继续在编程和历史研究的道路上前行。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第14篇：TypeScript -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-4.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">25</span>
+                                <span class="month">九月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">编程技术</div>
+                            <h2><a href="blog-single.html">TypeScript入门指南</a></h2>
+                            <p>从JavaScript到TypeScript的进阶之路，学习类型系统、接口、泛型等核心概念。通过实例展示TypeScript如何提升代码质量和开发效率。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 第15篇：前端性能优化 -->
+                    <div class="blog-item" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog-1.jpg" alt="博客图片">
+                            <div class="blog-date">
+                                <span class="day">20</span>
+                                <span class="month">九月</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-tag">编程技术</div>
+                            <h2><a href="blog-single.html">前端性能优化实践</a></h2>
+                            <p>深入探讨前端性能优化的各个方面，包括资源加载、渲染优化、代码分割等。分享实际项目中的性能优化经验和工具使用技巧。</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i> 我想见貂蝉</span>
+                            </div>
+                            <a href="blog-single.html" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 分页 -->
+                    <div class="pagination" id="pagination">
+                        <!-- 分页按钮将由JavaScript生成 -->
+                    </div>
+                </div>
+
+                <!-- 侧边栏 -->
+                <div class="blog-sidebar">
+                    <!-- 搜索框 -->
+                    <div class="sidebar-widget search-widget" data-aos="fade-up">
+                        <form>
+                            <input type="text" placeholder="搜索...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- 分类 -->
+                    <div class="sidebar-widget category-widget" data-aos="fade-up">
+                        <h3>文章分类</h3>
+                        <ul>
+                            <li><a href="#">编程技术 <span>(8)</span></a></li>
+                            <li><a href="#">历史研究 <span>(3)</span></a></li>
+                            <li><a href="#">学习笔记 <span>(2)</span></a></li>
+                            <li><a href="#">生活随笔 <span>(2)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 热门文章 -->
+                    <div class="sidebar-widget popular-widget" data-aos="fade-up">
+                        <h3>热门文章</h3>
+                        <div class="popular-posts">
+                            <div class="popular-post">
+                                <div class="post-image">
+                                    <img src="images/thumb-1.jpg" alt="热门文章">
+                                </div>
+                                <div class="post-content">
+                                    <h4><a href="blog-single.html">我的前端开发之旅</a></h4>
+                                    <span><i class="far fa-calendar"></i> 2025-10-15</span>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+                                <div class="post-image">
+                                    <img src="images/thumb-1.jpg" alt="热门文章">
+                                </div>
+                                <div class="post-content">
+                                    <h4><a href="blog-single.html">Vue 3组合式API实战指南</a></h4>
+                                    <span><i class="far fa-calendar"></i> 2025-10-10</span>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+                                <div class="post-image">
+                                    <img src="images/thumb-2.jpg" alt="热门文章">
+                                </div>
+                                <div class="post-content">
+                                    <h4><a href="blog-single.html">貂蝉：历史与传说之间</a></h4>
+                                    <span><i class="far fa-calendar"></i> 2025-10-05</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 标签云 -->
+                    <div class="sidebar-widget tag-widget" data-aos="fade-up">
+                        <h3>标签云</h3>
+                        <div class="tags">
+                            <a href="#">HTML</a>
+                            <a href="#">CSS</a>
+                            <a href="#">JavaScript</a>
+                            <a href="#">Vue.js</a>
+                            <a href="#">设计</a>
+                            <a href="#">前端</a>
+                            <a href="#">历史</a>
+                            <a href="#">三国</a>
+                            <a href="#">响应式</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">我想见<span>貂蝉</span></a>
+                    <p>分享编程技术与历史研究的个人博客</p>
+                </div>
+                <div class="footer-links">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="blog.html">博客</a></li>
+                        <li><a href="archive.html">归档</a></li>
+                        <li><a href="about.html">关于</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我</h3>
+                    <p><i class="fas fa-envelope"></i> woxiangjiandianchan@example.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 我想见貂蝉的个人博客. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript 文件 - 使用defer异步加载 -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <!-- 分页功能 - 最终版 -->
+    <script src="./js/pagination-final.js" defer></script>
+</body>
+
+</html>

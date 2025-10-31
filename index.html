@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我想见貂蝉 | 个人博客</title>
+    <meta name="description" content="我想见貂蝉的个人博客，分享编程技术、历史研究和生活感悟。">
+    
+    <!-- DNS预解析和预连接 -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    
+    <!-- 关键CSS内联或优先加载 -->
+    <link rel="stylesheet" href="./css/style-premium.css">
+    <link rel="stylesheet" href="./css/blog-cards.css">
+    <link rel="stylesheet" href="./css/theme-switcher.css">
+    <link rel="stylesheet" href="./css/performance.css">
+    
+    <!-- 非关键CSS延迟加载 -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"></noscript>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">我想见<span>貂蝉</span></a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="blog.html">博客</a></li>
+                    <li><a href="archive.html">归档</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-aos="fade-up">欢迎来到我的博客</h1>
+                <p data-aos="fade-up" data-aos-delay="100">分享编程技术、历史研究与生活感悟</p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <a href="blog.html" class="btn btn-primary">浏览文章</a>
+                    <a href="about.html" class="btn btn-secondary">关于我</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- 最新文章 -->
+    <section class="featured-blogs">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>最新文章</h2>
+                <p>记录学习与思考的点滴</p>
+            </div>
+            <div class="blog-cards">
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-content">
+                        <div class="blog-tag">编程技术</div>
+                        <h3><a href="blog-single.html">现代Web开发趋势</a></h3>
+                        <p>探索2025年最新的Web开发技术和趋势，了解行业动向。</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 2025-10-15</span>
+                            <span><i class="far fa-comment"></i> 24 评论</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-content">
+                        <div class="blog-tag">历史研究</div>
+                        <h3><a href="blog-single.html">貂蝉：历史与传说之间</a></h3>
+                        <p>深入探讨貂蝉这一历史人物的真实面貌与文学形象，揭示历史真相。</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 2025-10-10</span>
+                            <span><i class="far fa-comment"></i> 18 评论</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-content">
+                        <div class="blog-tag">学习笔记</div>
+                        <h3><a href="blog-single.html">JavaScript异步编程深度解析</a></h3>
+                        <p>详细讲解JavaScript异步编程，掌握Promise和async/await的使用。</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 2025-10-05</span>
+                            <span><i class="far fa-comment"></i> 12 评论</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer" data-aos="fade-up">
+                <a href="blog.html" class="btn btn-outline">查看更多博客</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文章分类 -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>文章分类</h2>
+                <p>按主题浏览内容</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>编程技术</h3>
+                    <p>前端开发、JavaScript、Web技术</p>
+                    <span class="category-count">8 篇文章</span>
+                </div>
+                <div class="category-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>历史研究</h3>
+                    <p>三国历史、人物研究、文化探索</p>
+                    <span class="category-count">3 篇文章</span>
+                </div>
+                <div class="category-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>学习笔记</h3>
+                    <p>读书笔记、学习心得、技术总结</p>
+                    <span class="category-count">2 篇文章</span>
+                </div>
+                <div class="category-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>生活随笔</h3>
+                    <p>生活感悟、随想杂谈、个人思考</p>
+                    <span class="category-count">2 篇文章</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="subscription">
+        <div class="container">
+            <div class="subscription-content">
+                <div class="subscription-text" data-aos="fade-right">
+                    <h2>订阅博客更新</h2>
+                    <p>第一时间获取最新文章推送</p>
+                </div>
+                <div class="subscription-form" data-aos="fade-left">
+                    <form>
+                        <input type="email" placeholder="您的电子邮箱" required>
+                        <button type="submit" class="btn btn-primary">订阅</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">我想见<span>貂蝉</span></a>
+                    <p>分享编程技术与历史研究的个人博客</p>
+                </div>
+                <div class="footer-links">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="blog.html">博客</a></li>
+                        <li><a href="archive.html">归档</a></li>
+                        <li><a href="about.html">关于</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我</h3>
+                    <p><i class="fas fa-envelope"></i> woxiangjiandianchan@example.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 我想见貂蝉的个人博客. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript 文件 - 使用defer异步加载 -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="./js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+/* ========================================
+   关于页样式修复
+   ======================================== */
+
+/* 关于内容区 */
+.about-section {
+    padding: 80px 0 !important;
+    background: var(--bg-secondary, #f7fafc) !important;
+}
+
+.about-content {
+    display: grid !important;
+    grid-template-columns: 480px 1fr !important;
+    gap: 60px !important;
+    align-items: center !important;
+}
+
+/* 关于图片 */
+.about-image {
+    width: 100% !important;
+    height: 560px !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2) !important;
+    display: block !important;
+}
+
+.about-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 关于文字 */
+.about-text {
+    padding: 20px 0 !important;
+}
+
+.about-text h2 {
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    margin-bottom: 24px !important;
+    color: #1a202c !important;
+}
+
+.about-text p {
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+    color: #4a5568 !important;
+    margin-bottom: 20px !important;
+}
+
+/* 技能区域 */
+.skills-section {
+    padding: 80px 0 !important;
+    background: white !important;
+}
+
+.skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 32px !important;
+    margin-top: 40px !important;
+}
+
+.skill-item {
+    background: var(--bg-secondary, #f7fafc) !important;
+    padding: 32px !important;
+    border-radius: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.skill-item h3 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin-bottom: 16px !important;
+    color: #1a202c !important;
+}
+
+.skill-item p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #4a5568 !important;
+    margin-bottom: 20px !important;
+}
+
+.skill-bar {
+    width: 100% !important;
+    height: 8px !important;
+    background: rgba(102, 126, 234, 0.1) !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+}
+
+.skill-progress {
+    height: 100% !important;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+    border-radius: 4px !important;
+    transition: width 1s ease !important;
+}
+
+/* 价值观区域 */
+.values-section {
+    padding: 80px 0 !important;
+    background: var(--bg-secondary, #f7fafc) !important;
+}
+
+.values-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 32px !important;
+    margin-top: 40px !important;
+}
+
+.value-item {
+    background: white !important;
+    padding: 40px 32px !important;
+    border-radius: 16px !important;
+    text-align: center !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease !important;
+}
+
+.value-item:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.15) !important;
+}
+
+.value-icon {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 24px !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 32px !important;
+    color: white !important;
+}
+
+.value-item h3 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin-bottom: 12px !important;
+    color: #1a202c !important;
+}
+
+.value-item p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #4a5568 !important;
+    margin: 0 !important;
+}
+
+/* 响应式 */
+@media (max-width: 1024px) {
+    .about-content {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .about-image {
+        height: 480px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section,
+    .skills-section,
+    .values-section {
+        padding: 60px 0 !important;
+    }
+    
+    .about-image {
+        height: 360px !important;
+    }
+    
+    .about-text h2 {
+        font-size: 28px !important;
+    }
+    
+    .about-text p {
+        font-size: 16px !important;
+    }
+    
+    .skills-grid,
+    .values-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
