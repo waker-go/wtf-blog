@@ -28,8 +28,14 @@
 }
 
 .theme-toggle-btn:hover {
-    transform: scale(1.1) rotate(15deg);
-    box-shadow: 0 6px 30px rgba(102, 126, 234, 0.6);
+    transform: scale(1.15) rotate(20deg);
+    box-shadow: 0 8px 35px rgba(102, 126, 234, 0.7);
+    animation: btn-pulse 1s ease infinite;
+}
+
+@keyframes btn-pulse {
+    0%, 100% { transform: scale(1.15) rotate(20deg); }
+    50% { transform: scale(1.2) rotate(25deg); }
 }
 
 .theme-toggle-btn:active {
@@ -88,7 +94,8 @@
 
 .theme-option:hover {
     background: #e9ecef;
-    transform: translateX(5px);
+    transform: translateX(8px) scale(1.02);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .theme-option.active {
@@ -202,31 +209,308 @@
     background: #374151;
 }
 
-/* 主题变量 - 浅色主题 */
+/* 主题变量 - 樱花粉主题（默认） */
+[data-theme="cherry"] {
+    --primary: #ff9a9e;
+    --secondary: #fecfef;
+    --accent: #ffd1dc;
+    --primary-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --text-light: #b2bec3;
+    --bg-primary: #ffffff;
+    --bg-secondary: #fff5f7;
+}
+
+/* 樱花粉主题 - 渐变背景 */
+[data-theme="cherry"] .hero {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%) !important;
+}
+
+[data-theme="cherry"] .page-title {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%) !important;
+}
+
+/* 樱花粉主题 - 按钮和标签 */
+[data-theme="cherry"] .blog-tag,
+[data-theme="cherry"] .category-icon,
+[data-theme="cherry"] .btn-primary {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%) !important;
+    box-shadow: 0 4px 12px rgba(255, 154, 158, 0.3) !important;
+}
+
+[data-theme="cherry"] .btn-outline {
+    border-color: #ff9a9e !important;
+    color: #ff9a9e !important;
+}
+
+[data-theme="cherry"] .btn-outline:hover {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%) !important;
+    color: white !important;
+}
+
+/* 樱花粉主题 - 链接和图标 */
+[data-theme="cherry"] .blog-meta i,
+[data-theme="cherry"] .read-more,
+[data-theme="cherry"] .category-count {
+    color: #ff9a9e !important;
+}
+
+[data-theme="cherry"] .blog-card:hover h3 a,
+[data-theme="cherry"] .blog-item:hover h2 a,
+[data-theme="cherry"] a:hover {
+    color: #ff9a9e !important;
+}
+
+/* 樱花粉主题 - 主题切换器 */
+[data-theme="cherry"] .theme-toggle-btn {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%) !important;
+    box-shadow: 0 4px 20px rgba(255, 154, 158, 0.4) !important;
+}
+
+[data-theme="cherry"] .theme-toggle-btn:hover {
+    box-shadow: 0 6px 30px rgba(255, 154, 158, 0.6) !important;
+}
+
+[data-theme="cherry"] .theme-option.active {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%) !important;
+}
+
+/* 樱花粉主题 - 进度条和回到顶部 */
+[data-theme="cherry"] .scroll-progress {
+    background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 100%) !important;
+}
+
+[data-theme="cherry"] .back-to-top {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%) !important;
+}
+
+/* 樱花粉主题 - 日期标签 */
+[data-theme="cherry"] .blog-date .day {
+    color: #ff9a9e !important;
+}
+
+/* 樱花粉主题 - 导航栏激活状态 */
+[data-theme="cherry"] .nav-menu a.active,
+[data-theme="cherry"] .nav-menu a:hover {
+    color: #ff9a9e !important;
+}
+
+/* 樱花粉主题 - 卡片悬停效果 */
+[data-theme="cherry"] .blog-card:hover,
+[data-theme="cherry"] .blog-item:hover,
+[data-theme="cherry"] .category-item:hover {
+    box-shadow: 0 8px 32px rgba(255, 154, 158, 0.2) !important;
+}
+
+/* ========================================
+   浅色主题（紫色）
+   ======================================== */
 [data-theme="light"] {
     --primary: #667eea;
     --secondary: #764ba2;
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-/* 主题变量 - 蓝色主题 */
+[data-theme="light"] .hero,
+[data-theme="light"] .page-title {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+[data-theme="light"] .blog-tag,
+[data-theme="light"] .category-icon,
+[data-theme="light"] .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important;
+}
+
+[data-theme="light"] .blog-meta i,
+[data-theme="light"] .read-more,
+[data-theme="light"] .category-count,
+[data-theme="light"] .blog-date .day {
+    color: #667eea !important;
+}
+
+[data-theme="light"] .blog-card:hover h3 a,
+[data-theme="light"] .blog-item:hover h2 a {
+    color: #667eea !important;
+}
+
+[data-theme="light"] .theme-toggle-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4) !important;
+}
+
+[data-theme="light"] .scroll-progress,
+[data-theme="light"] .back-to-top {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+[data-theme="light"] .nav-menu a.active,
+[data-theme="light"] .nav-menu a:hover {
+    color: #667eea !important;
+}
+
+/* ========================================
+   蓝色主题（海洋蓝）
+   ======================================== */
 [data-theme="blue"] {
     --primary: #4facfe;
     --secondary: #00f2fe;
     --primary-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
-/* 主题变量 - 绿色主题 */
+[data-theme="blue"] .hero,
+[data-theme="blue"] .page-title {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+}
+
+[data-theme="blue"] .blog-tag,
+[data-theme="blue"] .category-icon,
+[data-theme="blue"] .btn-primary {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3) !important;
+}
+
+[data-theme="blue"] .blog-meta i,
+[data-theme="blue"] .read-more,
+[data-theme="blue"] .category-count,
+[data-theme="blue"] .blog-date .day {
+    color: #4facfe !important;
+}
+
+[data-theme="blue"] .blog-card:hover h3 a,
+[data-theme="blue"] .blog-item:hover h2 a {
+    color: #4facfe !important;
+}
+
+[data-theme="blue"] .theme-toggle-btn {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+    box-shadow: 0 4px 20px rgba(79, 172, 254, 0.4) !important;
+}
+
+[data-theme="blue"] .scroll-progress,
+[data-theme="blue"] .back-to-top {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+}
+
+[data-theme="blue"] .nav-menu a.active,
+[data-theme="blue"] .nav-menu a:hover {
+    color: #4facfe !important;
+}
+
+[data-theme="blue"] .blog-card:hover,
+[data-theme="blue"] .blog-item:hover,
+[data-theme="blue"] .category-item:hover {
+    box-shadow: 0 8px 32px rgba(79, 172, 254, 0.2) !important;
+}
+
+/* ========================================
+   绿色主题（森林绿）
+   ======================================== */
 [data-theme="green"] {
     --primary: #43e97b;
     --secondary: #38f9d7;
     --primary-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
-/* 主题变量 - 橙色主题 */
+[data-theme="green"] .hero,
+[data-theme="green"] .page-title {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+}
+
+[data-theme="green"] .blog-tag,
+[data-theme="green"] .category-icon,
+[data-theme="green"] .btn-primary {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+    box-shadow: 0 4px 12px rgba(67, 233, 123, 0.3) !important;
+}
+
+[data-theme="green"] .blog-meta i,
+[data-theme="green"] .read-more,
+[data-theme="green"] .category-count,
+[data-theme="green"] .blog-date .day {
+    color: #43e97b !important;
+}
+
+[data-theme="green"] .blog-card:hover h3 a,
+[data-theme="green"] .blog-item:hover h2 a {
+    color: #43e97b !important;
+}
+
+[data-theme="green"] .theme-toggle-btn {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+    box-shadow: 0 4px 20px rgba(67, 233, 123, 0.4) !important;
+}
+
+[data-theme="green"] .scroll-progress,
+[data-theme="green"] .back-to-top {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+}
+
+[data-theme="green"] .nav-menu a.active,
+[data-theme="green"] .nav-menu a:hover {
+    color: #43e97b !important;
+}
+
+[data-theme="green"] .blog-card:hover,
+[data-theme="green"] .blog-item:hover,
+[data-theme="green"] .category-item:hover {
+    box-shadow: 0 8px 32px rgba(67, 233, 123, 0.2) !important;
+}
+
+/* ========================================
+   橙色主题（活力橙）
+   ======================================== */
 [data-theme="orange"] {
     --primary: #fa709a;
     --secondary: #fee140;
     --primary-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+[data-theme="orange"] .hero,
+[data-theme="orange"] .page-title {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+}
+
+[data-theme="orange"] .blog-tag,
+[data-theme="orange"] .category-icon,
+[data-theme="orange"] .btn-primary {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+    box-shadow: 0 4px 12px rgba(250, 112, 154, 0.3) !important;
+}
+
+[data-theme="orange"] .blog-meta i,
+[data-theme="orange"] .read-more,
+[data-theme="orange"] .category-count,
+[data-theme="orange"] .blog-date .day {
+    color: #fa709a !important;
+}
+
+[data-theme="orange"] .blog-card:hover h3 a,
+[data-theme="orange"] .blog-item:hover h2 a {
+    color: #fa709a !important;
+}
+
+[data-theme="orange"] .theme-toggle-btn {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+    box-shadow: 0 4px 20px rgba(250, 112, 154, 0.4) !important;
+}
+
+[data-theme="orange"] .scroll-progress,
+[data-theme="orange"] .back-to-top {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+}
+
+[data-theme="orange"] .nav-menu a.active,
+[data-theme="orange"] .nav-menu a:hover {
+    color: #fa709a !important;
+}
+
+[data-theme="orange"] .blog-card:hover,
+[data-theme="orange"] .blog-item:hover,
+[data-theme="orange"] .category-item:hover {
+    box-shadow: 0 8px 32px rgba(250, 112, 154, 0.2) !important;
 }
 
 /* 响应式 */

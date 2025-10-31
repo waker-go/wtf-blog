@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小游戏 | 我想见貂蝉</title>
+    <link rel="stylesheet" href="./css/style-premium.css">
+    <link rel="stylesheet" href="./css/theme-switcher.css">
+    <link rel="stylesheet" href="./css/games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">我想见<span>貂蝉</span></a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="blog.html">博客</a></li>
+                    <li><a href="games.html" class="active">游戏</a></li>
+                    <li><a href="archive.html">归档</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-title">
+        <div class="container">
+            <h1>休闲小游戏</h1>
+            <p>放松一下，玩个小游戏吧</p>
+        </div>
+    </section>
+
+    <!-- 游戏列表 -->
+    <section class="games-section">
+        <div class="container">
+            <div class="games-grid">
+                <!-- 游戏1: 樱花接球 -->
+                <div class="game-card">
+                    <div class="game-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3>樱花接球</h3>
+                    <p>用篮子接住飘落的樱花，看你能得多少分！</p>
+                    <button class="btn btn-primary" onclick="openGame('sakura-catch')">开始游戏</button>
+                </div>
+
+                <!-- 游戏2: 记忆翻牌 -->
+                <div class="game-card">
+                    <div class="game-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>记忆翻牌</h3>
+                    <p>考验你的记忆力，找出所有配对的卡片！</p>
+                    <button class="btn btn-primary" onclick="openGame('memory-match')">开始游戏</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏模态框 -->
+    <div id="game-modal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="game-close" onclick="closeGame()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="game-container"></div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">我想见<span>貂蝉</span></a>
+                    <p>分享编程技术与历史研究的个人博客</p>
+                </div>
+                <div class="footer-links">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="blog.html">博客</a></li>
+                        <li><a href="games.html">游戏</a></li>
+                        <li><a href="about.html">关于</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 我想见貂蝉的个人博客. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/games.js"></script>
+</body>
+</html>

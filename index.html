@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/blog-cards.css">
     <link rel="stylesheet" href="./css/theme-switcher.css">
     <link rel="stylesheet" href="./css/performance.css">
+    <link rel="stylesheet" href="./css/cherry-blossom-shader.css">
     
     <!-- 非关键CSS延迟加载 -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -38,6 +39,7 @@
                 <ul>
                     <li><a href="index.html" class="active">首页</a></li>
                     <li><a href="blog.html">博客</a></li>
+                    <li><a href="games.html">游戏</a></li>
                     <li><a href="archive.html">归档</a></li>
                     <li><a href="about.html">关于</a></li>
                 </ul>
@@ -50,6 +52,9 @@
 
     <!-- 英雄区域 -->
     <section class="hero">
+        <!-- 动漫风格樱花树 Canvas -->
+        <canvas id="cherry-blossom-canvas" class="cherry-blossom-canvas"></canvas>
+        
         <div class="container">
             <div class="hero-content">
                 <h1 data-aos="fade-up">欢迎来到我的博客</h1>
@@ -211,7 +216,10 @@
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
     <!-- JavaScript 文件 - 使用defer异步加载 -->
+    <script src="./js/performance-config.js"></script>
+    <link rel="stylesheet" href="./css/low-end-optimizations.css">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="./js/sakura-tree.js" defer></script>
     <script src="./js/main.js" defer></script>
 </body>
 

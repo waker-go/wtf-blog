@@ -1,0 +1,106 @@
+/**
+ * 低端设备优化样式
+ * 当检测到低端设备时自动应用
+ */
+
+/* 减少动画复杂度 */
+.low-end-device * {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.2s !important;
+}
+
+/* 禁用部分装饰性动画 */
+.low-end-device .cursor-follower,
+.low-end-device .cursor-dot,
+.low-end-device .cursor-outline {
+    display: none !important;
+}
+
+/* 简化背景效果 */
+.low-end-device .background-canvas,
+.low-end-device .floating-particles {
+    display: none !important;
+}
+
+/* 减少阴影效果 */
+.low-end-device .blog-card,
+.low-end-device .category-item,
+.low-end-device .game-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.low-end-device .blog-card:hover,
+.low-end-device .category-item:hover,
+.low-end-device .game-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 禁用3D变换 */
+.low-end-device .blog-card:hover,
+.low-end-device .category-item:hover {
+    transform: translateY(-5px) !important;
+}
+
+/* 简化渐变 */
+.low-end-device .hero {
+    background: var(--primary) !important;
+}
+
+/* 减少模糊效果 */
+.low-end-device .hero-overlay {
+    backdrop-filter: none !important;
+}
+
+/* 禁用视差效果 */
+.low-end-device .parallax {
+    transform: none !important;
+}
+
+/* 减少樱花数量 */
+.low-end-device .cherry-blossom-container .cherry-blossom:nth-child(n+16) {
+    display: none !important;
+}
+
+/* 简化按钮效果 */
+.low-end-device .btn::before,
+.low-end-device .btn::after {
+    display: none !important;
+}
+
+/* 禁用波纹效果 */
+.low-end-device .ripple-effect {
+    display: none !important;
+}
+
+/* 移动端额外优化 */
+@media (max-width: 768px) {
+    /* 减少动画 */
+    * {
+        animation-duration: 0.2s !important;
+        transition-duration: 0.15s !important;
+    }
+    
+    /* 简化卡片效果 */
+    .blog-card:hover,
+    .category-item:hover {
+        transform: none !important;
+    }
+    
+    /* 禁用复杂背景 */
+    .hero {
+        background: var(--primary-gradient) !important;
+    }
+}
+
+/* 打印样式优化 */
+@media print {
+    .cherry-blossom-container,
+    .background-canvas,
+    .floating-particles,
+    .cursor-follower,
+    .scroll-progress,
+    .back-to-top,
+    .theme-switcher {
+        display: none !important;
+    }
+}

@@ -94,45 +94,49 @@ document.addEventListener('DOMContentLoaded', function () {
         cherryContainer.className = 'cherry-blossom-container';
         body.appendChild(cherryContainer);
 
-        // 创建50个樱花
-        for (let i = 0; i < 50; i++) {
+        // 创建80个樱花（增加数量）
+        for (let i = 0; i < 80; i++) {
             createCherryBlossom(cherryContainer);
         }
 
-        // 每隔200ms创建一个新的樱花
+        // 每隔150ms创建一个新的樱花（更频繁）
         setInterval(() => {
             createCherryBlossom(cherryContainer);
             // 限制最大数量
-            if (cherryContainer.children.length > 100) {
+            if (cherryContainer.children.length > 150) {
                 cherryContainer.removeChild(cherryContainer.children[0]);
             }
-        }, 200);
+        }, 150);
     }
 
     function createCherryBlossom(container) {
         const blossom = document.createElement('div');
         blossom.className = 'cherry-blossom';
 
-        // 随机大小
-        const size = Math.random() * 15 + 5;
+        // 随机大小（更大范围）
+        const size = Math.random() * 20 + 8;
         blossom.style.width = `${size}px`;
         blossom.style.height = `${size}px`;
 
         // 随机位置
         blossom.style.left = `${Math.random() * 100}%`;
 
-        // 随机透明度
-        blossom.style.opacity = Math.random() * 0.6 + 0.4;
+        // 随机透明度（更明显）
+        blossom.style.opacity = Math.random() * 0.7 + 0.5;
 
         // 随机旋转
         blossom.style.transform = `rotate(${Math.random() * 360}deg)`;
 
-        // 随机动画持续时间
-        const duration = Math.random() * 10 + 5;
+        // 随机动画持续时间（更慢更优雅）
+        const duration = Math.random() * 12 + 8;
         blossom.style.animationDuration = `${duration}s, ${duration / 2}s, ${duration / 3}s`;
 
         // 随机延迟
         blossom.style.animationDelay = `${Math.random() * 5}s`;
+        
+        // 添加随机颜色变化
+        const pinkShade = Math.floor(Math.random() * 30 + 225);
+        blossom.style.background = `radial-gradient(circle, rgba(${pinkShade}, 182, 193, 0.9), rgba(255, 192, 203, 0.7))`;
 
         // 添加到容器
         container.appendChild(blossom);
@@ -728,11 +732,7 @@ function applyTheme(theme, mode) {
         applyAutoTheme();
     } else {
         // 手动模式：应用选择的主题
-        if (theme === 'cherry') {
-            root.removeAttribute('data-theme');
-        } else {
-            root.setAttribute('data-theme', theme);
-        }
+        root.setAttribute('data-theme', theme);
     }
 }
 
@@ -744,7 +744,7 @@ function applyAutoTheme() {
         root.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
     } else {
-        root.removeAttribute('data-theme');
+        root.setAttribute('data-theme', 'cherry');
         localStorage.setItem('theme', 'cherry');
     }
 }

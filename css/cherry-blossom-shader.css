@@ -1,0 +1,104 @@
+/**
+ * 动漫风格樱花树样式
+ */
+
+.cherry-blossom-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 确保 hero 区域有相对定位 */
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* 提升内容层级，确保在 Three.js 场景之上 */
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* 调整 overlay 层级 - 轻微的暗化效果 */
+.hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* 优化文字可读性 - 动漫风格的文字阴影 */
+.hero-content h1 {
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 0 20px rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.hero-content p {
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+/* 按钮样式增强 */
+.hero-buttons .btn {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .cherry-blossom-container {
+        /* 移动设备上可以调整渲染质量 */
+        transform: scale(0.9);
+        transform-origin: center center;
+    }
+    
+    .hero {
+        min-height: 80vh;
+    }
+}
+
+/* 性能优化：使用 GPU 加速 */
+.cherry-blossom-container {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* 加载动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cherry-blossom-container {
+    animation: fadeIn 1s ease-in;
+}
